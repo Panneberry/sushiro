@@ -11,6 +11,7 @@ const updateServiceChargeHtmlText = (serviceCharge) => {
     ).textContent = `Service Charge (10%): ${serviceCharge} THB`;
 };
 
+
 const updateTotalPriceWithServiceChargeHtmlText = (
     totalPriceWithServiceCharge
 ) => {
