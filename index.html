@@ -1,504 +1,131 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
 
     <title>Dish Price Calculator</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 10px;
-            font-size: 30px;
-            font-weight: bold;
-            /* Make the text bold */
-            background-color: #f8f9fa;
-            /* grey white background */
-            color: black;
-            /* Text color */
-            background-image: url("https://cdn.glitch.global/87b890ca-6106-49ca-aa8a-61c4d3b89a53/sushi%20bg-app.jpg?v=1693469701897");
-            background-repeat: repeat;
-        }
-
-        h1 {
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 100px;
-            color: #dc3545;
-            margin-top: 10px;
-            /* Adjust this value to position the title as desired */
-            /* Heading color */
-        }
-
-        .dish-label {
-            font-size: 110%;
-            /* Adjust the font size as needed */
-            text-align: center;
-        }
-
-        .dish {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-
-        .dish button {
-            touch-action: manipulation;
-            margin: 0 5px;
-            /* Adjust padding to make the buttons larger */
-            font-size: 120%;
-            /* Increase font size for the buttons */
-            background-color: #dc3545;
-            color: white;
-            border-radius: 10px;
-            /* Add border-radius for smooth corners */
-        }
-
-        button {
-            width: 300px;
-            height: 70px;
-        }
-
-        .dish span {
-            flex-grow: 1;
-            margin: 0 5px;
-        }
-
-        /***************************************************/
-
-
-        .dish60 {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-
-        .dish60 button {
-            touch-action: manipulation;
-            margin: 0 5px;
-            /* Adjust padding to make the buttons larger */
-            font-size: 120%;
-            /* Increase font size for the buttons */
-            background-color: #acdcfb;
-            /*           background: linear-gradient(18deg, #8ed1fc 20%, #2d2d2d 80%); */
-            color: white;
-            border-radius: 10px;
-            /* Add border-radius for smooth corners */
-        }
-
-        .dish60 span {
-            flex-grow: 1;
-            margin: 0 5px;
-        }
-
-        /*********/
-
-
-        .dish80 {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-
-        .dish80 button {
-            touch-action: manipulation;
-            margin: 0 5px;
-            /* Adjust padding to make the buttons larger */
-            font-size: 120%;
-            /* Increase font size for the buttons */
-            background-color: #fcb900;
-            /*         background: linear-gradient(90deg, #fcb900 50%,  #dc3545 80%); */
-            color: white;
-            border-radius: 10px;
-            /* Add border-radius for smooth corners */
-        }
-
-        .dish80 span {
-            flex-grow: 1;
-            margin: 0 5px;
-        }
-
-        /*********/
-        .dish100 {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-
-        .dish100 button {
-            touch-action: manipulation;
-            margin: 0 5px;
-            /* Adjust padding to make the buttons larger */
-            font-size: 120%;
-            /* Increase font size for the buttons */
-            background-color: #dc3545;
-            /*         background: linear-gradient(90deg, #2d2d2d 20%, #dc3545 80%); */
-            color: white;
-            border-radius: 10px;
-            /* Add border-radius for smooth corners */
-        }
-
-        .dish100 span {
-            flex-grow: 1;
-            margin: 0 5px;
-        }
-
-        /*********/
-
-
-        .dish120 {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-
-        .dish120 button {
-            touch-action: manipulation;
-            margin: 0 5px;
-            /* Adjust padding to make the buttons larger */
-            font-size: 120%;
-            /* Increase font size for the buttons */
-            background-color: #2d2d2d;
-            /*         background: linear-gradient(90deg, #2d2d2d 20%,  #fcb900 80%); */
-            color: white;
-            border-radius: 10px;
-            /* Add border-radius for smooth corners */
-        }
-
-        .dish120 span {
-            flex-grow: 1;
-            margin: 0 5px;
-        }
-
-        /*********/
-
-
-        #totalPrice,
-        #serviceCharge,
-        #totalPriceWithServiceCharge {
-            margin-top: 20px;
-        }
-
-        @media only screen and (max-width: 414px) {
-
-            /* iPhone 11 Pro Max */
-            .dish {
-                flex-wrap: wrap;
-            }
-
-            .dish button,
-            .dish span {
-                flex-basis: 100%;
-            }
-        }
-
-        img.logo {
-            max-width: 60%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-            margin-top: 30px;
-        }
-
-        img.sushiplate {
-            max-width: 100%;
-            height: auto;
-        }
-
-        /* ******************************************************************************** */
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Poppins", sans-serif;
-        }
-
-        ul {
-            list-style-type: none;
-            /* Remove the default bullet points */
-            padding: 0;
-        }
-
-        .sidebar_menu {
-            position: fixed;
-            height: 100vh;
-            width: 400px;
-            left: -400px;
-            /* Initially, the sidebar is hidden to the left */
-            background: rgba(251, 251, 251, 0.894);
-            box-shadow: 0 0 6px rgba(248, 101, 101, 0.642);
-            transition: left 0.3s ease;
-            /* Add transition to the left property */
-            overflow-y: auto;
-            /* Enable vertical scrolling for overflow content */
-        }
-
-        .sidebar_menu::-webkit-scrollbar {
-            width: 0.5em;
-            /* Adjust the width as needed */
-        }
-
-        .sidebar_menu::-webkit-scrollbar-thumb {
-            background-color: transparent;
-            /* Hide the thumb */
-        }
-
-        /* .main_box .sidebar_menu{
-        position: fixed;
-        height: 100vh;
-        width: 280px;
-        left: -280px;
-        background: rgba(255, 151, 151, 0.309);
-        box-shadow: 0 0 6px rgba(249, 161, 161, 0.635);
-      } */
-
-        .sidebar_menu .myLogoTab {
-            position: absolute;
-            width: 100%;
-            height: 60px;
-            box-shadow: 0 0 6px rgba(249, 161, 161, 0.635);
-        }
-
-        .sidebar_menu .myLogoTab a {
-            color: #dc3545;
-            font-size: 15vm;
-            font-weight: bold;
-            position: absolute;
-            transform: translateX(-50%);
-            /* Horizontally center the text */
-            right: 20px;
-            line-height: 60px;
-            text-decoration: none;
-        }
-
-        .sidebar_menu .menu {
-            position: absolute;
-            top: 80px;
-            width: 100%;
-        }
-
-        .sidebar_menu .menu li {
-            margin-top: 6px;
-            padding: 14px 20px;
-            transition: all 0.3s linear;
-        }
-
-        .sidebar_menu .menu i {
-            color: #dc3545;
-            font-size: 20px;
-            padding-right: 8px;
-        }
-
-        .sidebar_menu .menu a {
-            color: #dc3545;
-            font-size: 3vw;
-            text-decoration: none;
-        }
-
-        .sidebar_menu .menu li:hover {
-            border-left: 1px solid #dc3545;
-            box-shadow: 0 0 4px rgba(246, 111, 111, 0.621);
-            transition: all 0.3s linear;
-        }
-
-        /* 
-      .sidebar_menu .social_media{
-        position: absolute;
-        left: 50%;
-        bottom: 20px;
-        transform: translateX(-50%);
-        cursor: pointer;
-      } */
-        .sidebar_menu .social_media {
-            position: absolute;
-            bottom: 10px;
-            /* Adjust this value as needed */
-            left: 50%;
-            /* Center horizontally */
-            transform: translateX(-50%);
-            /* Center horizontally */
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-        }
-
-        .social_media a {
-            text-decoration: none;
-            color: #dc3545;
-            font-size: 5vw;
-            margin: 0 10px;
-            /* Adjust spacing between icons */
-        }
-
-        .social_media i {
-            padding: 0 5px;
-            color: #dc3545;
-            opacity: 0.6;
-            font-size: 5vw;
-            transition: all 0.2s linear;
-        }
-
-        .social_media i:hover {
-            opacity: 1;
-        }
-
-        #check {
-            display: none;
-        }
-
-        .main_box .btn_side1 i {
-            color: #dc3545;
-            /* come here */
-            font-size: 7vw;
-            font-weight: 700;
-            position: absolute;
-            left: 16px;
-            line-height: 60px;
-            cursor: pointer;
-            opacity: 1;
-            transition: all 0.3 linear;
-        }
-
-        .sidebar_menu .btn_closeSide2 i {
-            color: #333;
-            font-size: 4vw;
-            line-height: 60px;
-            position: absolute;
-            right: 50px;
-            cursor: pointer;
-            opacity: 0;
-            transition: all 0.3 linear;
-        }
-
-        .btn_side1 i:hover {
-            /* come here */
-            font-size: 7.1vw;
-        }
-
-        .btn_closeSide2 i:hover {
-            color: #333;
-            font-size: 4vw;
-        }
-
-        #check:checked~.sidebar_menu {
-            left: 0px;
-        }
-
-        #check:checked~.btn_side1 i {
-            opacity: 0;
-        }
-
-        #check:checked~.sidebar_menu .btn_closeSide2 i {
-            opacity: 10;
-            color: #dc3545;
-        }
-    </style>
+    <link rel="stylesheet" href="style-sushi.css">
+   
     <script src="scriptsushi.js"></script>
-</head>
+  </head>
 
-<body onclick="toggleOutSidebar (event)">
+  <body >
     <div class="main_box">
-        <input type="checkbox" id="check" />
-        <div class="btn_side1" onclick="opennedSidebar (event)">
-            <label for="check">
-                <i class="fas fa-bars"></i>
-            </label>
+      <input type="checkbox" id="check" />
+      <div class="btn_side1" >
+        <label for="check">
+          <i class="fas fa-bars"></i>
+        </label>
+      </div>
+     <div class="sidebar_menu"  >  <!--  onclick = "toggleOutSidebar (event)"  -->
+        <div class="myLogoTab" >
+          <a href="#">Panne project</a>
         </div>
-        <div class="sidebar_menu" onclick="opennedSidebar (event)"> <!--    -->
-            <div class="myLogoTab">
-                <a href="#">Panne project</a>
-            </div>
-            <div class="btn_closeSide2"> <!--     -->
-                <label for="check">
-                    <i class="fas fa-times"></i>
-                </label>
-            </div>
-            <div class="menu">
-                <ul>
-                    <li>
-                        <a href="https://sushiro.co.th/" target="_blank"><i class="fas fa-link"></i> visit Sushiro
-                            Official</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fas fa-qrcode"></i> Dashboard</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fas fa-stream"></i> Overview</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fas fa-calendar-week"></i> events</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fas fa-question-circle"></i> About</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fas fa-sliders-h"></i> Services</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fas fa-phone-volume"></i> contacts</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fas fa-comments"></i> Facebook</a>
-                    </li>
-                </ul>
-
-            </div>
+       <div class="btn_closeSide2" >   <!--   onclick = "opennedSidebar (event)" -->
+          <label for="check">
+            <i class="fas fa-times"></i>
+          </label>
         </div>
-
-        <!--           <div class="social_media">
+        <div class="menu">
+          <ul>
+            <li>
+              <a href="https://sushiro.co.th/" target="_blank"><i class="fas fa-link"></i> visit Sushiro Official</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-qrcode"></i> Dashboard</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-stream"></i> Overview</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-calendar-week"></i> events</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-question-circle"></i> About</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-sliders-h"></i> Services</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-phone-volume"></i> contacts</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-comments"></i> Facebook</a>
+            </li>
+          </ul>
+      
+        </div>
+      </div>
+       
+<!--           <div class="social_media">
         <a href="#"><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-twitter"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
         <a href="#"><i class="fab fa-youtube"></i></a> -->
-    </div>
+      </div>
     </div>
 
     <!--     <div id="sidebar" class="sidebar-hidden">
        <img src="https://cdn.glitch.global/87b890ca-6106-49ca-aa8a-61c4d3b89a53/icons8-button-72(%403%C3%97).png?v=1694142971439" class="use-img">
     </div> -->
 
-    <img class="logo"
-        src="https://cdn.glitch.global/87b890ca-6106-49ca-aa8a-61c4d3b89a53/SUSHIRO_logo_alphabet.png?v=1693466009771"
-        alt="Logo" />
+    <img
+      class="logo"
+      src="https://cdn.glitch.global/87b890ca-6106-49ca-aa8a-61c4d3b89a53/SUSHIRO_logo_alphabet.png?v=1693466009771"
+      alt="Logo"
+    />
 
     <h1>Calculator</h1>
 
     <div class="dish">
-        <button onclick="minusDish(0)">-40</button>
-        <span class="dish-label">Quantity: <span id="dish1Quantity">0</span></span>
-        <button onclick="addDish(0)">+40</button>
+      <button onclick="minusDish(0)">-40</button>
+      <span class="dish-label"
+        >Quantity: <span id="dish1Quantity">0</span></span
+      >
+      <button onclick="addDish(0)">+40</button>
     </div>
 
     <div class="dish60">
-        <button onclick="minusDish(1)">-60</button>
-        <span class="dish-label">Quantity: <span id="dish2Quantity">0</span></span>
-        <button onclick="addDish(1)">+60</button>
+      <button onclick="minusDish(1)">-60</button>
+      <span class="dish-label"
+        >Quantity: <span id="dish2Quantity">0</span></span
+      >
+      <button onclick="addDish(1)">+60</button>
     </div>
 
     <div class="dish80">
-        <button onclick="minusDish(2)">-80</button>
-        <span class="dish-label">Quantity: <span id="dish3Quantity">0</span></span>
-        <button onclick="addDish(2)">+80</button>
+      <button onclick="minusDish(2)">-80</button>
+      <span class="dish-label"
+        >Quantity: <span id="dish3Quantity">0</span></span
+      >
+      <button onclick="addDish(2)">+80</button>
     </div>
 
     <div class="dish100">
-        <button onclick="minusDish(4)">-100</button>
-        <span class="dish-label">Quantity: <span id="dish5Quantity">0</span></span>
-        <button onclick="addDish(4)">+100</button>
-    </div>
+      <button onclick="minusDish(4)">-100</button>
+      <span class="dish-label"
+        >Quantity: <span id="dish5Quantity">0</span></span
+      >
+      <button onclick="addDish(4)">+100</button>
+    </div> 
 
     <div class="dish120">
-        <button onclick="minusDish(3)">-120</button>
-        <span class="dish-label">Quantity: <span id="dish4Quantity">0</span></span>
-        <button onclick="addDish(3)">+120</button>
+      <button onclick="minusDish(3)">-120</button>
+      <span class="dish-label"
+        >Quantity: <span id="dish4Quantity">0</span></span
+      >
+      <button onclick="addDish(3)">+120</button>
     </div>
 
     <div class="dish">
-        <button onclick="minusDish(5)">-160</button>
-        <span class="dish-label">Quantity: <span id="dish6Quantity">0</span></span>
-        <button onclick="addDish(5)">+160</button>
+      <button onclick="minusDish(5)">-160</button>
+      <span class="dish-label"
+        >Quantity: <span id="dish6Quantity">0</span></span
+      >
+      <button onclick="addDish(5)">+160</button>
     </div>
 
     <h2 id="totalPrice">Sub Total Price: 0 THB</h2>
@@ -508,22 +135,24 @@
     <h2 id="totalPrices"></h2>
 
     <div class="dish">
-        <!-- same style as dish button -->
-        <button onclick="clearPage()">Clear</button>
-        <button onclick="undoLastAction()">Undo</button>
-        <button onclick="CalNextPerson()">CalNextPerson</button>
+      <!-- same style as dish button -->
+      <button onclick="clearPage()">Clear</button>
+      <button onclick="undoLastAction()">Undo</button>
+      <button onclick="CalNextPerson()">CalNextPerson</button>
     </div>
 
     <div id="totalPerson">
-        <h2 id="totalAmountFromEveryone" style="display: none">
-            Total amount from everyone = 0 THB
-        </h2>
+      <h2 id="totalAmountFromEveryone" style="display: none">
+        Total amount from everyone = 0 THB
+      </h2>
     </div>
     <div class="image-container">
-        <img class="sushiplate"
-            src="https://cdn.glitch.global/87b890ca-6106-49ca-aa8a-61c4d3b89a53/sushi%20plate.png?v=1693472907599"
-            alt="sushiplate" />
+      <img
+        class="sushiplate"
+        src="https://cdn.glitch.global/87b890ca-6106-49ca-aa8a-61c4d3b89a53/sushi%20plate.png?v=1693472907599"
+        alt="sushiplate"
+      />
     </div>
-</body>
-
+  </body>
 </html>
+
