@@ -342,6 +342,17 @@ align-items: center;
   color: #dc3545;;
 }
 
+/* ************************************ img web ******************************************** */
+/* 
+img .logo {
+  max-width: 20%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+} */
+
+
 /* ******************************** responsive ************************************************ */
 
 
@@ -363,7 +374,7 @@ img.logo {
   display: block;
   margin: 0 auto;
   margin-top: 30px;
-}
+} 
 
 img.sushiplate {
   max-width: 100%;
