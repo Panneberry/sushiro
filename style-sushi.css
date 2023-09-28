@@ -187,7 +187,7 @@ background-color: transparent; /* Hide the thumb */
 
 .sidebar_menu .menu {
   position: absolute;
-  top: 80px;
+  top: 55px;
   width: 100%;
 }
 
@@ -412,6 +412,8 @@ img.sushiplate {
   .sidebar_menu .btn_closeSide2 i {
     font-size: 250%;
   }
+
 }
+
 
 /* ********************************** responsive ********************************************** */
