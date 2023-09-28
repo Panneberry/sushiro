@@ -15,8 +15,8 @@ body {
 
 h1 {
   text-align: center;
-  margin-bottom: 30px;
-  font-size: 100px;
+  margin-bottom: 30px;  
+  font-size: 150%;
   color: #dc3545;
   margin-top: 10px; /* Adjust this value to position the title as desired */
   /* Heading color */
@@ -24,34 +24,29 @@ h1 {
 
 /********************************dish design***********************************/
 .dish-label {
-  font-size: 110%;
-  /* Adjust the font size as needed */
-  text-align: center;
+  font-size: 80%;
+  /* text-align: center; */
 }
 
 .dish {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
-  display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 .dish button {
   touch-action: manipulation;
   margin: 0 5px;
-  /* Adjust padding to make the buttons larger */
-  font-size: 120%;
-  /* Increase font size for the buttons */
+  font-size: 80%;
   background-color: #dc3545;
   color: white;
   border-radius: 10px;
-  /* Add border-radius for smooth corners */
 }
 
 button {
-  width: 300px;
-  height: 70px;
+  width: 200px;
+  height: 50px;
 }
 
 .dish span {
@@ -60,157 +55,66 @@ button {
 }
 
 /**************************each plate design*****************************/
-.dish40 {
+/* Common styles for all .dish classes */
+.dish40,
+.dish60,
+.dish80,
+.dish100,
+.dish120,
+.dish160{
   display: flex;
   align-items: center;
   margin-bottom: 10px;
 }
 
-.dish40 button {
-  touch-action: manipulation;
-  margin: 0 5px;
-  /* Adjust padding to make the buttons larger */
-  font-size: 120%;
-  /* Increase font size for the buttons */
-   background-color: #dc3545; 
-/*           background: linear-gradient(18deg, #8ed1fc 20%, #2d2d2d 80%); */
-  color: white;
-  border-radius: 10px;
-  /* Add border-radius for smooth corners */
-}
-
-.dish40 span {
-  flex-grow: 1;
-  margin: 0 5px;
-}
- /*********/
-
-.dish60 {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.dish60 button {
-  touch-action: manipulation;
-  margin: 0 5px;
-  /* Adjust padding to make the buttons larger */
-  font-size: 120%;
-  /* Increase font size for the buttons */
-   background-color: #acdcfb; 
-/*           background: linear-gradient(18deg, #8ed1fc 20%, #2d2d2d 80%); */
-  color: white;
-  border-radius: 10px;
-  /* Add border-radius for smooth corners */
-}
-
-.dish60 span {
-  flex-grow: 1;
-  margin: 0 5px;
-}
- /*********/
-
-
-.dish80 {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.dish80 button {
-  touch-action: manipulation;
-  margin: 0 5px;
-  /* Adjust padding to make the buttons larger */
-  font-size: 120%;
-  /* Increase font size for the buttons */
-  background-color: #fcb900;
-/*         background: linear-gradient(90deg, #fcb900 50%,  #dc3545 80%); */
-  color: white;
-  border-radius: 10px;
-  /* Add border-radius for smooth corners */
-}
-
-.dish80 span {
-  flex-grow: 1;
-  margin: 0 5px;
-}
-
- /*********/
- .dish100 {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.dish100 button {
-  touch-action: manipulation;
-  margin: 0 5px;
-  /* Adjust padding to make the buttons larger */
-  font-size: 120%;
-  /* Increase font size for the buttons */
-  background-color: #dc3545;
-/*         background: linear-gradient(90deg, #2d2d2d 20%, #dc3545 80%); */
-  color: white;
-  border-radius: 10px;
-  /* Add border-radius for smooth corners */
-}
-
-.dish100 span {
-  flex-grow: 1;
-  margin: 0 5px;
-}
- /*********/
-
-
-.dish120 {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.dish120 button {
-  touch-action: manipulation;
-  margin: 0 5px;
-  /* Adjust padding to make the buttons larger */
-  font-size: 120%;
-  /* Increase font size for the buttons */
-  background-color: #2d2d2d;
-/*         background: linear-gradient(90deg, #2d2d2d 20%,  #fcb900 80%); */
-  color: white;
-  border-radius: 10px;
-  /* Add border-radius for smooth corners */
-}
-
-.dish120 span {
-  flex-grow: 1;
-  margin: 0 5px;
-}
-
-/********/
-
-.dish160 {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
+.dish40 button,
+.dish60 button,
+.dish80 button,
+.dish100 button,
+.dish120 button,
 .dish160 button {
   touch-action: manipulation;
   margin: 0 5px;
-  /* Adjust padding to make the buttons larger */
-  font-size: 120%;
-  /* Increase font size for the buttons */
-   background-color: #dc3545; 
-/*           background: linear-gradient(18deg, #8ed1fc 20%, #2d2d2d 80%); */
+  font-size: 80%;
   color: white;
   border-radius: 10px;
-  /* Add border-radius for smooth corners */
 }
 
-.dish160 span {
+.dish40 span,
+.dish60 span,
+.dish80 span,
+.dish100 span,
+.dish120 span,
+.dish160 span  {
   flex-grow: 1;
   margin: 0 5px;
 }
+
+/* Specific styles for each .dish class */
+.dish40 button {
+  background-color: #dc3545;
+}
+
+.dish60 button {
+  background-color: #acdcfb;
+}
+
+.dish80 button {
+  background-color: #fcb900;
+}
+
+.dish100 button {
+  background-color: #dc3545;
+}
+
+.dish120 button {
+  background-color: #2d2d2d;
+}
+
+.dish160 button {
+  background-color: #dc3545;
+}
+
 
 /****************************side bar design***********************************/
 
@@ -218,6 +122,11 @@ button {
 #serviceCharge,
 #totalPriceWithServiceCharge {
   margin-top: 20px;
+  padding-left: 30%;
+  font-size: 80%;
+}
+#totalPriceWithServiceCharge {
+  margin-bottom: 20px;
 }
 
 * {
@@ -296,7 +205,7 @@ background-color: transparent; /* Hide the thumb */
 
 .sidebar_menu .menu a {
   color: #dc3545;
-  font-size: 3vw;
+  font-size: 80%;
   text-decoration: none;
 }
 
@@ -349,7 +258,7 @@ align-items: center;
 .main_box .btn_side1 i {
   color: #dc3545;
   /* come here */
-  font-size: 7vw;  
+  font-size: 150%;  
   font-weight: 700;
   position: absolute;
   left: 16px;
@@ -361,7 +270,7 @@ align-items: center;
 
 .sidebar_menu .btn_closeSide2 i { 
   color: #333;
-  font-size: 4vw;
+  font-size: 100%;
   line-height: 60px;
   position: absolute;
   right: 50px;
@@ -372,7 +281,7 @@ align-items: center;
 
 .btn_side1 i:hover {
   /* come here */
-  font-size: 7.1vw;
+  font-size: 155%;
 }
 
 .btn_closeSide2 i:hover {
