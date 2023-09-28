@@ -1,10 +1,10 @@
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 10px;
   font-size: 30px;
-  font-weight: bold;
-  /* Make the text bold */
+  font-weight: bold; /* Make the text bold */
   background-color: #f8f9fa;
   /* grey white background */
   color: black;
@@ -18,12 +18,11 @@ h1 {
   margin-bottom: 30px;
   font-size: 100px;
   color: #dc3545;
-  margin-top: 10px;
-  /* Adjust this value to position the title as desired */
+  margin-top: 10px; /* Adjust this value to position the title as desired */
   /* Heading color */
 }
 
-/******************************************dish design*************************************************/
+/********************************dish design***********************************/
 .dish-label {
   font-size: 110%;
   /* Adjust the font size as needed */
@@ -58,7 +57,7 @@ button {
   margin: 0 5px;
 }
 
-/******************************************each plate design********************************************/
+/**************************each plate design*****************************/
 
 .dish60 {
   display: flex;
@@ -72,8 +71,8 @@ button {
   /* Adjust padding to make the buttons larger */
   font-size: 120%;
   /* Increase font size for the buttons */
-  background-color: #acdcfb;
-  /*           background: linear-gradient(18deg, #8ed1fc 20%, #2d2d2d 80%); */
+   background-color: #acdcfb; 
+/*           background: linear-gradient(18deg, #8ed1fc 20%, #2d2d2d 80%); */
   color: white;
   border-radius: 10px;
   /* Add border-radius for smooth corners */
@@ -83,8 +82,7 @@ button {
   flex-grow: 1;
   margin: 0 5px;
 }
-
-/*********/
+ /*********/
 
 
 .dish80 {
@@ -100,7 +98,7 @@ button {
   font-size: 120%;
   /* Increase font size for the buttons */
   background-color: #fcb900;
-  /*         background: linear-gradient(90deg, #fcb900 50%,  #dc3545 80%); */
+/*         background: linear-gradient(90deg, #fcb900 50%,  #dc3545 80%); */
   color: white;
   border-radius: 10px;
   /* Add border-radius for smooth corners */
@@ -111,8 +109,8 @@ button {
   margin: 0 5px;
 }
 
-/*********/
-.dish100 {
+ /*********/
+ .dish100 {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
@@ -125,7 +123,7 @@ button {
   font-size: 120%;
   /* Increase font size for the buttons */
   background-color: #dc3545;
-  /*         background: linear-gradient(90deg, #2d2d2d 20%, #dc3545 80%); */
+/*         background: linear-gradient(90deg, #2d2d2d 20%, #dc3545 80%); */
   color: white;
   border-radius: 10px;
   /* Add border-radius for smooth corners */
@@ -135,8 +133,7 @@ button {
   flex-grow: 1;
   margin: 0 5px;
 }
-
-/*********/
+ /*********/
 
 
 .dish120 {
@@ -152,7 +149,7 @@ button {
   font-size: 120%;
   /* Increase font size for the buttons */
   background-color: #2d2d2d;
-  /*         background: linear-gradient(90deg, #2d2d2d 20%,  #fcb900 80%); */
+/*         background: linear-gradient(90deg, #2d2d2d 20%,  #fcb900 80%); */
   color: white;
   border-radius: 10px;
   /* Add border-radius for smooth corners */
@@ -163,7 +160,7 @@ button {
   margin: 0 5px;
 }
 
-/******************************************side bar design**********************************************/
+/****************************side bar design***********************************/
 
 #totalPrice,
 #serviceCharge,
@@ -179,35 +176,27 @@ button {
 }
 
 ul {
-  list-style-type: none;
-  /* Remove the default bullet points */
+  list-style-type: none; /* Remove the default bullet points */
   padding: 0;
 }
-
 .sidebar_menu {
   position: fixed;
   height: 100vh;
   width: 400px;
-  left: -400px;
-  /* Initially, the sidebar is hidden to the left */
+  left: -400px; /* Initially, the sidebar is hidden to the left */   
   background: rgba(251, 251, 251, 0.894);
   box-shadow: 0 0 6px rgba(248, 101, 101, 0.642);
-  transition: left 0.3s ease;
-  /* Add transition to the left property */
-  overflow-y: auto;
-  /* Enable vertical scrolling for overflow content */
+  transition: left 0.3s ease; /* Add transition to the left property */
+  overflow-y: auto; /* Enable vertical scrolling for overflow content */
 }
 
 .sidebar_menu::-webkit-scrollbar {
-  width: 0.5em;
-  /* Adjust the width as needed */
+width: 0.5em; /* Adjust the width as needed */
 }
 
 .sidebar_menu::-webkit-scrollbar-thumb {
-  background-color: transparent;
-  /* Hide the thumb */
+background-color: transparent; /* Hide the thumb */
 }
-
 /* .main_box .sidebar_menu{
   position: fixed;
   height: 100vh;
@@ -229,8 +218,7 @@ ul {
   font-size: 15vm;
   font-weight: bold;
   position: absolute;
-  transform: translateX(-50%);
-  /* Horizontally center the text */
+  transform: translateX(-50%); /* Horizontally center the text */
   right: 20px;
   line-height: 60px;
   text-decoration: none;
@@ -265,7 +253,6 @@ ul {
   box-shadow: 0 0 4px rgba(246, 111, 111, 0.621);
   transition: all 0.3s linear;
 }
-
 /* 
 .sidebar_menu .social_media{
   position: absolute;
@@ -274,8 +261,35 @@ ul {
   transform: translateX(-50%);
   cursor: pointer;
 } */
+.sidebar_menu  .social_media {
+position: absolute;
+bottom: 10px; /* Adjust this value as needed */
+left: 50%; /* Center horizontally */
+transform: translateX(-50%); /* Center horizontally */
+cursor: pointer;
+display: flex;
+align-items: center;
+}
 
-/******************************open-close sidebar button**********************************/
+.social_media a {
+  text-decoration: none;
+  color: #dc3545;
+  font-size: 5vw;
+  margin: 0 10px; /* Adjust spacing between icons */
+}
+
+ .social_media i {
+  padding: 0 5px;
+  color: #dc3545;
+  opacity: 0.6;
+  font-size: 5vw;
+  transition: all 0.2s linear;
+}
+
+.social_media i:hover {
+  opacity: 1;
+}
+
 #check {
   display: none;
 }
@@ -283,7 +297,7 @@ ul {
 .main_box .btn_side1 i {
   color: #dc3545;
   /* come here */
-  font-size: 7vw;
+  font-size: 7vw;  
   font-weight: 700;
   position: absolute;
   left: 16px;
@@ -293,7 +307,7 @@ ul {
   transition: all 0.3 linear;
 }
 
-.sidebar_menu .btn_closeSide2 i {
+.sidebar_menu .btn_closeSide2 i { 
   color: #333;
   font-size: 4vw;
   line-height: 60px;
@@ -314,77 +328,36 @@ ul {
   font-size: 4vw;
 }
 
-#check:checked~.sidebar_menu {
+#check:checked ~ .sidebar_menu {
   left: 0px;
 }
 
-#check:checked~.btn_side1 i {
+#check:checked ~ .btn_side1 i {
   opacity: 0;
 }
 
-#check:checked~.sidebar_menu .btn_closeSide2 i {
-
+#check:checked ~ .sidebar_menu .btn_closeSide2 i {
+  
   opacity: 10;
-  color: #dc3545;
-  ;
+  color: #dc3545;;
 }
 
-/*******************************social media icon***********************************/
-.sidebar_menu .social_media {
-  position: absolute;
-  bottom: 10px;
-  /* Adjust this value as needed */
-  left: 50%;
-  /* Center horizontally */
-  transform: translateX(-50%);
-  /* Center horizontally */
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-}
-
-.social_media a {
-  text-decoration: none;
-  color: #dc3545;
-  font-size: 5vw;
-  margin: 0 10px;
-  /* Adjust spacing between icons */
-}
-
-.social_media i {
-  padding: 0 5px;
-  color: #dc3545;
-  opacity: 0.6;
-  font-size: 5vw;
-  transition: all 0.2s linear;
-}
-
-.social_media i:hover {
-  opacity: 1;
-}
-
-/* ************************************** img web ******************************************** */
-
-
-img.logo {
-  max-width: 60%;
+/* ************************************ img web ******************************************** */
+/* 
+img .logo {
+  max-width: 20%;
   height: auto;
   display: block;
   margin: 0 auto;
   margin-top: 30px;
-}
+} */
 
-img.sushiplate {
-  max-width: 100%;
-  height: auto;
-}
 
-/* *************************************** responsive ************************************************ */
+/* ******************************** responsive ************************************************ */
 
 
 @media only screen and (max-width: 414px) {
   /* iPhone 11 Pro Max */
-
   .dish {
     flex-wrap: wrap;
   }
@@ -395,5 +368,17 @@ img.sushiplate {
   }
 }
 
+img.logo {
+  max-width: 60%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+} 
+
+img.sushiplate {
+  max-width: 100%;
+  height: auto;
+}
 
 /* ********************************** responsive ********************************************** */
