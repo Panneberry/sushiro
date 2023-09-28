@@ -364,31 +364,7 @@ ul {
 }
 
 /* ************************************ img web ******************************************** */
-/* 
-img .logo {
-  max-width: 20%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  margin-top: 30px;
-} */
 
-
-/* ******************************** responsive ************************************************ */
-
-
-@media only screen and (max-width: 414px) {
-
-  /* iPhone 11 Pro Max */
-  .dish {
-    flex-wrap: wrap;
-  }
-
-  .dish button,
-  .dish span {
-    flex-basis: 100%;
-  }
-}
 
 img.logo {
   max-width: 60%;
@@ -402,5 +378,22 @@ img.sushiplate {
   max-width: 100%;
   height: auto;
 }
+
+/* ******************************** responsive ************************************************ */
+
+
+@media only screen and (max-width: 414px) {
+  /* iPhone 11 Pro Max */
+
+  .dish {
+    flex-wrap: wrap;
+  }
+
+  .dish button,
+  .dish span {
+    flex-basis: 100%;
+  }
+}
+
 
 /* ********************************** responsive ********************************************** */
