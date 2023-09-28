@@ -22,6 +22,7 @@ h1 {
   /* Heading color */
 }
 
+/********************************dish design***********************************/
 .dish-label {
   font-size: 110%;
   /* Adjust the font size as needed */
@@ -56,8 +57,7 @@ button {
   margin: 0 5px;
 }
 
-/***************************************************/
-
+/**************************each plate design*****************************/
 
 .dish60 {
   display: flex;
@@ -159,8 +159,8 @@ button {
   flex-grow: 1;
   margin: 0 5px;
 }
- /*********/
 
+/********************************side bar design***********************************/
 
 #totalPrice,
 #serviceCharge,
@@ -261,35 +261,8 @@ background-color: transparent; /* Hide the thumb */
   transform: translateX(-50%);
   cursor: pointer;
 } */
-.sidebar_menu  .social_media {
-position: absolute;
-bottom: 10px; /* Adjust this value as needed */
-left: 50%; /* Center horizontally */
-transform: translateX(-50%); /* Center horizontally */
-cursor: pointer;
-display: flex;
-align-items: center;
-}
 
-.social_media a {
-  text-decoration: none;
-  color: #dc3545;
-  font-size: 5vw;
-  margin: 0 10px; /* Adjust spacing between icons */
-}
-
- .social_media i {
-  padding: 0 5px;
-  color: #dc3545;
-  opacity: 0.6;
-  font-size: 5vw;
-  transition: all 0.2s linear;
-}
-
-.social_media i:hover {
-  opacity: 1;
-}
-
+/******************************open-close sidebar button**********************************/
 #check {
   display: none;
 }
@@ -341,6 +314,36 @@ align-items: center;
   opacity: 10;
   color: #dc3545;;
 }
+
+/*******************************social media icon***********************************/
+.sidebar_menu  .social_media {
+  position: absolute;
+  bottom: 10px; /* Adjust this value as needed */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  }
+  
+  .social_media a {
+    text-decoration: none;
+    color: #dc3545;
+    font-size: 5vw;
+    margin: 0 10px; /* Adjust spacing between icons */
+  }
+  
+   .social_media i {
+    padding: 0 5px;
+    color: #dc3545;
+    opacity: 0.6;
+    font-size: 5vw;
+    transition: all 0.2s linear;
+  }
+  
+  .social_media i:hover {
+    opacity: 1;
+  }
 
 /* ************************************ img web ******************************************** */
 /* 
