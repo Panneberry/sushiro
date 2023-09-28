@@ -58,6 +58,30 @@ button {
 }
 
 /**************************each plate design*****************************/
+.dish40 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.dish40 button {
+  touch-action: manipulation;
+  margin: 0 5px;
+  /* Adjust padding to make the buttons larger */
+  font-size: 120%;
+  /* Increase font size for the buttons */
+   background-color: #dc3545; 
+/*           background: linear-gradient(18deg, #8ed1fc 20%, #2d2d2d 80%); */
+  color: white;
+  border-radius: 10px;
+  /* Add border-radius for smooth corners */
+}
+
+.dish40 span {
+  flex-grow: 1;
+  margin: 0 5px;
+}
+ /*********/
 
 .dish60 {
   display: flex;
@@ -156,6 +180,32 @@ button {
 }
 
 .dish120 span {
+  flex-grow: 1;
+  margin: 0 5px;
+}
+
+/********/
+
+.dish160 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.dish160 button {
+  touch-action: manipulation;
+  margin: 0 5px;
+  /* Adjust padding to make the buttons larger */
+  font-size: 120%;
+  /* Increase font size for the buttons */
+   background-color: #dc3545; 
+/*           background: linear-gradient(18deg, #8ed1fc 20%, #2d2d2d 80%); */
+  color: white;
+  border-radius: 10px;
+  /* Add border-radius for smooth corners */
+}
+
+.dish160 span {
   flex-grow: 1;
   margin: 0 5px;
 }
@@ -343,33 +393,9 @@ align-items: center;
 }
 
 /* ************************************ img web ******************************************** */
-/* 
-img .logo {
-  max-width: 20%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  margin-top: 30px;
-} */
-
-
-/* ******************************** responsive ************************************************ */
-
-
-@media only screen and (max-width: 414px) {
-  /* iPhone 11 Pro Max */
-  .dish {
-    flex-wrap: wrap;
-  }
-
-  .dish button,
-  .dish span {
-    flex-basis: 100%;
-  }
-}
 
 img.logo {
-  max-width: 60%;
+  max-width: 20%;
   height: auto;
   display: block;
   margin: 0 auto;
@@ -377,8 +403,90 @@ img.logo {
 } 
 
 img.sushiplate {
-  max-width: 100%;
+  max-width: 50%;
   height: auto;
+}
+
+/* ******************************** responsive ************************************************ */
+
+
+@media only screen and (max-width: 768px) {
+  /* iPhone 11 Pro Max */
+  .dish {
+    flex-wrap: wrap;
+  }
+
+  /* .dish {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  } */
+
+  .dish button{
+    flex-basis: 30%;
+    font-size: 90%;
+  }
+  .dish span {
+    flex-basis: 30%;
+  }
+
+  .dish40 button {
+    font-size: 100%;
+  }
+  .dish60 button {
+    font-size: 100%;
+  }
+  .dish80 button {
+    font-size: 100%;
+  }
+  .dish100 button {
+    font-size: 100%;
+  }
+  .dish120 button {
+    font-size: 100%;
+  }
+
+  button {
+    width: 120px;
+    height: 45px;
+  }
+  img.logo {
+    max-width: 60%;
+  } 
+  .dish160 button {
+    font-size: 100%;
+  }
+
+  img.sushiplate {
+    max-width: 100%;
+  }
+
+    
+  h1 {
+    margin-bottom: 30px;
+    font-size: 120%;
+    margin-top: 10px; 
+  }
+
+  .dish-label {
+    font-size: 80%;
+    /* Adjust the font size as needed */
+    text-align: center;
+  }
+
+  #totalPrice,
+  #serviceCharge,
+  #totalPriceWithServiceCharge {
+    margin-top: 20px;
+  }
+
+  *
+  {
+    font-size: 80%;
+  }
+  #totalPriceWithServiceCharge {
+  margin-bottom: 10px;
+  }
 }
 
 /* ********************************** responsive ********************************************** */
