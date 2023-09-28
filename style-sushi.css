@@ -168,33 +168,6 @@ button {
   margin-top: 20px;
 }
 
-@media only screen and (max-width: 414px) {
-  /* iPhone 11 Pro Max */
-  .dish {
-    flex-wrap: wrap;
-  }
-
-  .dish button,
-  .dish span {
-    flex-basis: 100%;
-  }
-}
-
-img.logo {
-  max-width: 60%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  margin-top: 30px;
-}
-
-img.sushiplate {
-  max-width: 100%;
-  height: auto;
-}
-
-/* ******************************************************************************** */
-
 * {
   margin: 0;
   padding: 0;
@@ -368,3 +341,33 @@ align-items: center;
   opacity: 10;
   color: #dc3545;;
 }
+
+/* ******************************** responsive ************************************************ */
+
+
+@media only screen and (max-width: 414px) {
+  /* iPhone 11 Pro Max */
+  .dish {
+    flex-wrap: wrap;
+  }
+
+  .dish button,
+  .dish span {
+    flex-basis: 100%;
+  }
+}
+
+img.logo {
+  max-width: 60%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+img.sushiplate {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ********************************** responsive ********************************************** */
