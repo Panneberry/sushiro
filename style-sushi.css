@@ -325,8 +325,8 @@ img.sushiplate {
   /* iPhone 11 Pro Max */
   .dish {
     flex-wrap: wrap;
-    margin-left: 10px;
-    margin-right: 10px;
+    /* margin-left: 10px;
+    margin-right: 10px; */
   }
 
   /* .dish {
@@ -362,8 +362,8 @@ img.sushiplate {
   .dish160 button
    {
     font-size: 80%;
-    margin-right: 10px;
-    margin-left: 10px;
+    /* margin-right: 10px;
+    margin-left: 10px; */
   }
 
   button {
@@ -393,7 +393,7 @@ img.sushiplate {
   #serviceCharge,
   #totalPriceWithServiceCharge {
     margin-top: 20px;
-    padding-left: 10px;
+    padding-left: 0px;
   }
 
   *
