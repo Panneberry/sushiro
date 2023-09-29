@@ -133,6 +133,13 @@ button {
   /* padding-left: 31.5%; */
   font-size: 80%;
     
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: right;
+  padding-inline: 28%;
+
 }
 
 #totalPriceWithServiceCharge {
@@ -149,6 +156,14 @@ button {
 .totalPersonClass{
   font-size: 50%;
   /* padding-left: 31.5%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  padding-inline: 28%;
+
+
 }
 
 /****************************side bar design***********************************/
