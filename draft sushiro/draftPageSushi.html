@@ -11,72 +11,37 @@
     <link rel="icon" href="Sushiro favicon.png" type="image/png">
 
     <title>Panne - Sushiro</title>
-    <link rel="stylesheet" href="style-sushi.css">
+    <link rel="stylesheet" href="draftStyleSushi.css">
    
-    <script src="scriptsushi.js"></script>
+    <script src="draftScriptSushi.js"></script>
   </head>
 
   <body >
-    <div class="main_box">
-      <input type="checkbox" id="check" />
-      <div class="btn_side1" >
-        <label for="check">
-          <i class="fas fa-bars"></i>
-        </label>
-      </div>
-     <div class="sidebar_menu"  >  <!--  onclick = "toggleOutSidebar (event)"  -->
-        <div class="myLogoTab" >
-          <a href="#">Panne project</a>
-        </div>
-       <div class="btn_closeSide2" >   <!--   onclick = "opennedSidebar (event)" -->
-          <label for="check">
-            <i class="fas fa-times"></i>
-          </label>
-        </div>
-        <div class="menu">
-          <ul>
-            <li>
-              <a href="https://sushiro.co.th/" target="_blank"><i class="fas fa-link"></i> visit Sushiro Official</a>
-            </li>
-            <li>
-              <a href="#"><i class="fas fa-qrcode"></i> Dashboard</a>
-            </li>
-            <li>
-              <a href="#"><i class="fas fa-stream"></i> Overview</a>
-            </li>
-            <li>
-              <a href="#"><i class="fas fa-calendar-week"></i> events</a>
-            </li>
-            <li>
-              <a href="#"><i class="fas fa-question-circle"></i> About</a>
-            </li>
-            <li>
-              <a href="#"><i class="fas fa-sliders-h"></i> Services</a>
-            </li>
-            <li>
-              <a href="#"><i class="fas fa-phone-volume"></i> contacts</a>
-            </li>
-            <li>
-              <a href="#"><i class="fas fa-comments"></i> Facebook</a>
-            </li>
+      <header>
+        <nav id="menu">
+          <ul> 
+              <li><a href="#about">About</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
           </ul>
-      
-        </div>
-      </div>
-       
-<!--           <div class="social_media">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-youtube"></i></a> -->
+
+          <p class="lite-text">MENU</p>
+          
+          <div class="close-icon" >  
+              <label>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+              </label>
+          </div>
+      </nav>
+      </header>
+   
+  <div class="menu-icon">
+      <label>
+        <i class="fas fa-bars"  onclick="openmenu()"></i>
+      </label>
+  </div>
       </div>
     </div>
-
-    <!--     <div id="sidebar" class="sidebar-hidden">
-       <img src="https://cdn.glitch.global/87b890ca-6106-49ca-aa8a-61c4d3b89a53/icons8-button-72(%403%C3%97).png?v=1694142971439" class="use-img">
-    </div> -->
-
-  
     <img
       class="logo"
       src="https://cdn.glitch.global/87b890ca-6106-49ca-aa8a-61c4d3b89a53/SUSHIRO_logo_alphabet.png?v=1693466009771"
@@ -84,8 +49,6 @@
     />
 
     <h1>Calculator</h1>
-
-      <!-- start dish 40 - 160 thb -->
     <div class="eachDishCenter">
         <div class="dish40">
           <button onclick="minusDish(0)">-40</button>
