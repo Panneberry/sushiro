@@ -73,7 +73,7 @@ button {
 .dish100 button,
 .dish120 button,
 .dish160 button {
-  touch-action: manipulation;
+  touch-action: manipulation; /* for fast clicking*/
   margin: 0 5px;
   font-size: 80%;
   color: white;
@@ -350,14 +350,14 @@ img.sushiplate {
   .dish120 button,
   .dish160 button
    {
-    font-size: 100%;
+    font-size: 80%;
     margin-right: 10px;
     margin-left: 10px;
   }
 
   button {
-    width: 120px;
-    height: 45px;
+    width: 100px;
+    height: 35px;
   }
   img.logo {
     max-width: 60%;
@@ -375,7 +375,6 @@ img.sushiplate {
 
   .dish-label {
     font-size: 80%;
-    /* Adjust the font size as needed */
     text-align: center;
   }
 
