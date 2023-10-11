@@ -297,7 +297,7 @@ img.sushiplate {
   #totalPriceWithServiceCharge {
     margin-bottom: 10px;
   }
-
+/* 
   .sidebar_menu {
     width: 70%;
     left: -70%;
@@ -311,11 +311,11 @@ img.sushiplate {
 
   .sidebar_menu .myLogoTab a {
     font-size: 170%;
-  }
+  } */
 
-  .sidebar_menu .btn_closeSide2 i {
+  /* .sidebar_menu .btn_closeSide2 i {
     font-size: 250%;
-  }
+  } */
 
 }
 
@@ -396,17 +396,24 @@ img.sushiplate {
 
 /* ************************************  sidebar official ******************************************** */
 
-.div-logo {
-  float: none;
-  margin: 12px 20px 8px;
-  width: 150px;
-}
-
-.sidebar_menu {
+/* .sidebar_menu {
   position: fixed;
   background: rgba(251, 251, 251, 0.894);
   box-shadow: 0 0 6px rgba(248, 101, 101, 0.642);
+} */
+
+.sidebar_menu {
+  position: fixed;
+  /* background: rgba(251, 251, 251, 0.894); */
+  box-shadow: 0 0 6px rgba(248, 101, 101, 0.642);
+  top: 0; /* Position at the top of the viewport */
+  left: 0; /* Position at the left of the viewport */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
 }
+
+/* Rest of your CSS... */
+
 
 .sidebar_menu::-webkit-scrollbar {
   width: 0.5em; /* Adjust the width as needed */
@@ -426,13 +433,16 @@ img.sushiplate {
 }
 
 .nav-menu.navOpen {
-  display: block;
-  float: none;
-  text-align: center;
-  width: 100%;
-  height: calc(100vh - 53px);
-  margin: 0 auto;
-  position: relative;
+  left: 0; /* Move it to the visible area */
+  background: rgba(251, 251, 251, 0.894); 
+  
+  display: block;         /* Display the element as a block */
+  float: none;            /* Remove any floating behavior */
+  text-align: center;     /* Center-align text within the element */
+  width: 100%;            /* Set the width to 100% of the viewport */
+  height: calc(100vh - 53px);  /* Set the height to 100% of the viewport height minus 53px */
+  margin: 0 auto;         /* Center the element horizontally */
+  position: relative;     /* Use a relative positioning context */
 }
 
 .nav-menu.navOpen ul {
@@ -454,7 +464,7 @@ img.sushiplate {
   font-size: 20px;
   line-height: 30px;
   color: #dc3545;
-  font-size: 80%;
+  /* font-size: 80%; */
   text-decoration: none;
 }
 
