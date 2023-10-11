@@ -402,6 +402,7 @@ img.sushiplate {
   box-shadow: 0 0 6px rgba(248, 101, 101, 0.642);
 } */
 
+
 .sidebar_menu {
   position: fixed;
   /* background: rgba(251, 251, 251, 0.894); */
@@ -433,6 +434,9 @@ img.sushiplate {
 }
 
 .nav-menu.navOpen {
+
+  padding-top: 7%;
+
   left: 0; /* Move it to the visible area */
   background: rgba(251, 251, 251, 0.894); 
   
