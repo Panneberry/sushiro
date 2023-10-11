@@ -166,42 +166,6 @@ body {
   
   }
   
-  /****************************side bar design***********************************/
-  .close-icon i {
-    width: 25px;
-    font-size: 250%;
-    position: absolute;
-    right: 80px;
-    top: 50px;
-    cursor: pointer;
-
-    padding: 0 5px; /* make the color change when hover*/
-    color: #54281d;
-    opacity: 0.6;
-    transition: all 0.2s linear;
-}
-  
-.close-icon i:hover {
-    opacity: 1;
-}
-
-.menu-icon i{
-    width: 30px;
-    font-size: 250%;
-    position: absolute;
-    right: 80px;
-    top: 50px;
-    cursor: pointer;
-
-    padding: 0 5px; /* make the color change when hover*/
-    color: #54281d;
-    opacity: 0.6;
-    transition: all 0.2s linear;
-}
-
-.menu-icon i:hover {
-    opacity: 1;
-}
   
   /* ************************************ img web ******************************************** */
   
