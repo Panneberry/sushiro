@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html style="padding-left: 15px;
+            padding-right: 15px;">
+
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="icon" href="Sushiro favicon.png" type="image/png">
+
+  <title>Panne - Sushiro</title>
+  <link rel="stylesheet" href="style-sushi.css">
+
+  <script src="scriptsushi.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="main_box">
+      <input type="checkbox" id="check" />
+      <div class="btn_side1">
+        <label for="check">
+          <i class="fas fa-bars"></i>
+        </label>
+      </div>
+      <div class="sidebar_menu"> <!--  onclick = "toggleOutSidebar (event)"  -->
+        <div class="myLogoTab">
+          <a href="#">Panne project</a>
+        </div>
+        <div class="btn_closeSide2"> <!--   onclick = "opennedSidebar (event)" -->
+          <label for="check">
+            <i class="fas fa-times"></i>
+          </label>
+        </div>
+        <div class="menu">
+          <ul>
+            <li>
+              <a href="https://sushiro.co.th/" target="_blank"><i class="fas fa-link"></i> visit Sushiro Official</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-qrcode"></i> Dashboard</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-stream"></i> Overview</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-calendar-week"></i> events</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-question-circle"></i> About</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-sliders-h"></i> Services</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-phone-volume"></i> contacts</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-comments"></i> Facebook</a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+
+      <!--           <div class="social_media">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a> -->
+    </div>
+    </div>
+
+    <!--     <div id="sidebar" class="sidebar-hidden">
+       <img src="https://cdn.glitch.global/87b890ca-6106-49ca-aa8a-61c4d3b89a53/icons8-button-72(%403%C3%97).png?v=1694142971439" class="use-img">
+    </div> -->
+
+
+    <img class="logo"
+      src="https://cdn.glitch.global/87b890ca-6106-49ca-aa8a-61c4d3b89a53/SUSHIRO_logo_alphabet.png?v=1693466009771"
+      alt="Logo" />
+
+    <h1>Calculator</h1>
+
+    <!-- start dish 40 - 160 thb -->
+    <div class="eachDishCenter">
+      <div class="dish40">
+        <button onclick="minusDish(0)">-40</button>
+        <span class="dish-label">Quantity: <span id="dish1Quantity">0</span></span>
+        <button onclick="addDish(0)">+40</button>
+      </div>
+
+      <div class="dish60">
+        <button onclick="minusDish(1)">-60</button>
+        <span class="dish-label">Quantity: <span id="dish2Quantity">0</span></span>
+        <button onclick="addDish(1)">+60</button>
+      </div>
+
+      <div class="dish80">
+        <button onclick="minusDish(2)">-80</button>
+        <span class="dish-label">Quantity: <span id="dish3Quantity">0</span></span>
+        <button onclick="addDish(2)">+80</button>
+      </div>
+
+      <div class="dish100">
+        <button onclick="minusDish(4)">-100</button>
+        <span class="dish-label">Quantity: <span id="dish5Quantity">0</span></span>
+        <button onclick="addDish(4)">+100</button>
+      </div>
+
+      <div class="dish120">
+        <button onclick="minusDish(3)">-120</button>
+        <span class="dish-label">Quantity: <span id="dish4Quantity">0</span></span>
+        <button onclick="addDish(3)">+120</button>
+      </div>
+
+      <div class="dish160">
+        <button onclick="minusDish(5)">-160</button>
+        <span class="dish-label">Quantity: <span id="dish6Quantity">0</span></span>
+        <button onclick="addDish(5)">+160</button>
+      </div>
+    </div>
+    <!-- end dish 40 - 160 thb -->
+    <h2 id="totalPrice">Sub Total Price: 0 THB</h2>
+    <h2 id="serviceCharge">Service Charge (10%): 0 THB</h2>
+    <h2 id="totalPriceWithServiceCharge">Total Price: 0 THB</h2>
+
+    <h2 id="totalPrices"></h2>
+
+    <div class="dish">
+      <button onclick="clearPage()">Clear</button>
+      <button onclick="undoLastAction()">Undo</button>
+      <button onclick="CalNextPerson()">CalNextPerson</button>
+    </div>
+
+    <div id="totalPerson" class="totalPersonClass">
+      <h2 id="totalAmountFromEveryone" style="display: none">
+        Total amount from everyone = 0 THB
+      </h2>
+    </div>
+
+    <!-- <div class="video-container">
+      <video playsinline="" autoplay="" muted="" loop="" poster="https://sushiro.co.th/wp-content/uploads/2021/03/Screen-Shot-2564-03-25-at-09.45.15-e1616640535147.png" id="bgvid"
+      style="  max-width: 800px;
+              width: 100%;
+              text-align: center;">
+        <!--<source src="https://sushiro.co.th/wp-content/uploads/2021/03/sushiro_vdo1.mp4" type="video/mp4">-->
+    <!-- <source src="https://sushiro.co.th/wp-content/uploads/2021/03/Sushiro_web.mp4" type="video/mp4" >
+     </video>
+    </div>
+    -->
+
+
+    <!-- <div class="image-container">
+      <img
+        class="sushiplate"
+        src="https://cdn.glitch.global/87b890ca-6106-49ca-aa8a-61c4d3b89a53/sushi%20plate.png?v=1693472907599"
+        alt="sushiplate"
+      />
+    </div> -->
+  </body>
+
+</html>

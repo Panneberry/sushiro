@@ -1,12 +1,3 @@
-/* thai */
-@font-face {
-  font-family: 'Kanit';
-  font-style: italic;
-  font-weight: 100;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/kanit/v15/nKKV-Go6G5tXcraQI2GwZoREDFs.woff2) format('woff2');
-  unicode-range: U+0E01-0E5B, U+200C-200D, U+25CC;
-}
 
 
 body {
@@ -14,8 +5,7 @@ body {
   margin: 0;
   padding: 0px;
   font-size: 30px;
-  font-weight: bold;
-  /* Make the text bold */
+  font-weight: bold; /* Make the text bold */
   background-color: #f8f9fa;
   /* grey white background */
   color: black;
@@ -26,11 +16,10 @@ body {
 
 h1 {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 30px;  
   font-size: 150%;
   color: #dc3545;
-  margin-top: 10px;
-  /* Adjust this value to position the title as desired */
+  margin-top: 10px; /* Adjust this value to position the title as desired */
   /* Heading color */
 }
 
@@ -70,14 +59,11 @@ button {
 /**************************each plate design*****************************/
 /* Common styles for all .dish classes */
 
-.eachDishCenter {
+.eachDishCenter{
   display: flex;
-  justify-content: flex-end;
-  /* Horizontally align items to the end */
-  align-items: center;
-  /* Vertically center items */
-  flex-direction: column;
-  /* Layout items in a column */
+  justify-content: flex-end; /* Horizontally align items to the end */
+  align-items: center; /* Vertically center items */
+  flex-direction: column; /* Layout items in a column */
 }
 
 .dish40,
@@ -85,7 +71,7 @@ button {
 .dish80,
 .dish100,
 .dish120,
-.dish160 {
+.dish160{
   /* padding-left: 30%; */
   margin-bottom: 10px;
 }
@@ -96,8 +82,7 @@ button {
 .dish100 button,
 .dish120 button,
 .dish160 button {
-  touch-action: manipulation;
-  /* for fast clicking*/
+  touch-action: manipulation; /* for fast clicking*/
   margin: 0 5px;
   font-size: 80%;
   color: white;
@@ -109,7 +94,7 @@ button {
 .dish80 span,
 .dish100 span,
 .dish120 span,
-.dish160 span {
+.dish160 span  {
   flex-grow: 1;
   margin: 0 5px;
 }
@@ -148,7 +133,7 @@ button {
   margin-top: 20px;
   /* padding-left: 31.5%; */
   font-size: 80%;
-
+    
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -169,7 +154,7 @@ button {
   font-family: "Poppins", sans-serif;
 }
 
-.totalPersonClass {
+.totalPersonClass{
   font-size: 50%;
   /* padding-left: 31.5%; */
   display: flex;
@@ -178,7 +163,179 @@ button {
   align-items: flex-start;
   text-align: left;
   padding-inline: 28%;
+
+
 }
+
+/****************************side bar design***********************************/
+ul {
+  list-style-type: none; /* Remove the default bullet points */
+  padding: 0;
+}
+.sidebar_menu {
+  position: fixed;
+  height: 100vh;
+  width: 400px;
+  left: -450px; /* Initially, the sidebar is hidden to the left */   
+  background: rgba(251, 251, 251, 0.894);
+  box-shadow: 0 0 6px rgba(248, 101, 101, 0.642);
+  transition: left 0.3s ease; /* Add transition to the left property */
+  overflow-y: auto; /* Enable vertical scrolling for overflow content */
+}
+
+.sidebar_menu::-webkit-scrollbar {
+width: 0.5em; /* Adjust the width as needed */
+}
+
+.sidebar_menu::-webkit-scrollbar-thumb {
+background-color: transparent; /* Hide the thumb */
+}
+/* .main_box .sidebar_menu{
+  position: fixed;
+  height: 100vh;
+  width: 280px;
+  left: -280px;
+  background: rgba(255, 151, 151, 0.309);
+  box-shadow: 0 0 6px rgba(249, 161, 161, 0.635);
+} */
+
+.sidebar_menu .myLogoTab {
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  box-shadow: 0 0 6px rgba(249, 161, 161, 0.635);
+}
+
+.sidebar_menu .myLogoTab a {
+  color: #dc3545;
+  font-size: 15vm;
+  font-weight: bold;
+  position: absolute;
+  transform: translateX(-50%); /* Horizontally center the text */
+  right: 20px;
+  line-height: 60px;
+  text-decoration: none;
+}
+
+.sidebar_menu .menu {
+  position: absolute;
+  top: 55px;
+  width: 100%;
+}
+
+.sidebar_menu .menu li {
+  margin-top: 6px;
+  padding: 14px 20px;
+  transition: all 0.3s linear;
+}
+
+.sidebar_menu .menu i {
+  color: #dc3545;
+  font-size: 20px;
+  padding-right: 8px;
+}
+
+.sidebar_menu .menu a {
+  color: #dc3545;
+  font-size: 80%;
+  text-decoration: none;
+}
+
+.sidebar_menu .menu li:hover {
+  border-left: 1px solid #dc3545;
+  box-shadow: 0 0 4px rgba(246, 111, 111, 0.621);
+  transition: all 0.3s linear;
+}
+/* 
+.sidebar_menu .social_media{
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  cursor: pointer;
+} */
+.sidebar_menu  .social_media {
+position: absolute;
+bottom: 10px; /* Adjust this value as needed */
+left: 50%; /* Center horizontally */
+transform: translateX(-50%); /* Center horizontally */
+cursor: pointer;
+display: flex;
+align-items: center;
+}
+
+.social_media a {
+  text-decoration: none;
+  color: #dc3545;
+  font-size: 5vw;
+  margin: 0 10px; /* Adjust spacing between icons */
+}
+
+ .social_media i {
+  padding: 0 5px;
+  color: #dc3545;
+  opacity: 0.6;
+  font-size: 5vw;
+  transition: all 0.2s linear;
+}
+
+.social_media i:hover {
+  opacity: 1;
+}
+
+#check {
+  display: none;
+}
+
+.main_box .btn_side1 i {
+  color: #dc3545;
+  /* come here */
+  font-size: 150%;  
+  font-weight: 700;
+  position: absolute;
+  left: 16px;
+  line-height: 60px;
+  cursor: pointer;
+  opacity: 1;
+  transition: all 0.3 linear;
+}
+
+.sidebar_menu .btn_closeSide2 i { 
+  color: #333;
+  font-size: 100%;
+  line-height: 60px;
+  position: absolute;
+  right: 50px;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.3 linear;
+}
+
+.btn_side1 i:hover {
+  /* come here */
+  font-size: 155%;
+}
+
+.btn_closeSide2 i:hover {
+  color: #333;
+  font-size: 4vw;
+}
+
+#check:checked ~ .sidebar_menu {
+  left: 0px;
+  /* top: 0px; */
+}
+
+#check:checked ~ .btn_side1 i {
+  opacity: 0;
+}
+
+#check:checked ~ .sidebar_menu .btn_closeSide2 i {
+  
+  opacity: 10;
+  color: #dc3545;;
+}
+
 
 /* ************************************ img web ******************************************** */
 
@@ -188,7 +345,7 @@ img.logo {
   display: block;
   margin: 0 auto;
   margin-top: 30px;
-}
+} 
 
 img.sushiplate {
   max-width: 50%;
@@ -199,7 +356,6 @@ img.sushiplate {
 
 
 @media only screen and (max-width: 768px) {
-
   /* iPhone 11 Pro Max */
   .dish {
     flex-wrap: wrap;
@@ -213,11 +369,10 @@ img.sushiplate {
     margin-bottom: 10px;
   } */
 
-  .dish button {
+  .dish button{
     flex-basis: 30%;
     font-size: 70%;
   }
-
   .dish span {
     flex-basis: 30%;
   }
@@ -227,7 +382,7 @@ img.sushiplate {
   .dish80,
   .dish100,
   .dish120,
-  .dish160 {
+  .dish160{
     padding-left: 0px;
     display: flex;
     /* margin-bottom: 10px; */
@@ -239,7 +394,8 @@ img.sushiplate {
   .dish80 button,
   .dish100 button,
   .dish120 button,
-  .dish160 button {
+  .dish160 button
+   {
     font-size: 80%;
     /* margin-right: 10px;
     margin-left: 10px; */
@@ -249,10 +405,9 @@ img.sushiplate {
     width: 100px;
     height: 35px;
   }
-
   img.logo {
     max-width: 60%;
-  }
+  } 
 
   img.sushiplate {
     max-width: 100%;
@@ -261,7 +416,7 @@ img.sushiplate {
   h1 {
     margin-bottom: 30px;
     font-size: 120%;
-    margin-top: 10px;
+    margin-top: 10px; 
   }
 
   .dish-label {
@@ -285,17 +440,17 @@ img.sushiplate {
 
   }
 
-  .totalPersonClass {
+  .totalPersonClass{
     font-size: 70%;
     padding-left: 0px;
   }
 
-  * {
+  *
+  {
     font-size: 80%;
   }
-
   #totalPriceWithServiceCharge {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
   }
 
   .sidebar_menu {
@@ -321,154 +476,3 @@ img.sushiplate {
 
 
 /* ********************************** responsive ********************************************** */
-
-/* ****************icon 3 sidebar*************** */
-#nav-icon1 {
-  width: 30px;
-  height: 25px;
-  position: fixed;
-  margin: 0;
-  top: 15px;
-  right: 20px;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: .5s ease-in-out;
-  -moz-transition: .5s ease-in-out;
-  -o-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
-  cursor: pointer;
-  z-index: 1001;
-}
-
-#nav-icon1 span {
-  display: block;
-  position: fixed;
-  height: 4px;
-  width: 100%;
-  background: #cc2a2f;
-  border-radius: 10px;
-  opacity: 1;
-  left: 0;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: .25s ease-in-out;
-  -moz-transition: .25s ease-in-out;
-  -o-transition: .25s ease-in-out;
-  transition: .25s ease-in-out;
-}
-
-#nav-icon1 span:nth-child(1) {
-  top: 0px;
-}
-
-#nav-icon1 span:nth-child(2) {
-  top: 10px;
-}
-
-#nav-icon1 span:nth-child(3) {
-  top: 20px;
-}
-
-#nav-icon1.open span:nth-child(1) {
-  top: 10px;
-  -webkit-transform: rotate(135deg);
-  -moz-transform: rotate(135deg);
-  -o-transform: rotate(135deg);
-  transform: rotate(135deg);
-}
-
-#nav-icon1.open span:nth-child(2) {
-  opacity: 0;
-  left: -30px;
-}
-
-#nav-icon1.open span:nth-child(3) {
-  top: 10px;
-  -webkit-transform: rotate(-135deg);
-  -moz-transform: rotate(-135deg);
-  -o-transform: rotate(-135deg);
-  transform: rotate(-135deg);
-}
-
-/* ************************************  sidebar official ******************************************** */
-
-.div-logo {
-  float: none;
-  margin: 12px 20px 8px;
-  width: 150px;
-}
-
-.sidebar_menu {
-  position: fixed;
-  background: rgba(251, 251, 251, 0.894);
-  box-shadow: 0 0 6px rgba(248, 101, 101, 0.642);
-}
-
-.sidebar_menu::-webkit-scrollbar {
-  width: 0.5em; /* Adjust the width as needed */
-  }
-
-  .sidebar_menu .nav-menu  {
-    position: absolute;
-    width: 100%;
-    height: 60px;
-    box-shadow: 0 0 6px rgba(249, 161, 161, 0.635);
-  }
-
-  
-.nav-menu {
-  display: none;
-  z-index: 2;
-}
-
-.nav-menu.navOpen {
-  display: block;
-  float: none;
-  text-align: center;
-  width: 100%;
-  height: calc(100vh - 53px);
-  margin: 0 auto;
-  position: relative;
-}
-
-.nav-menu.navOpen ul {
-  float: none;
-}
-
-.nav-menu.navOpen ul li {
-  display: block;
-  padding: 20px 0;
-  margin: 0;
-
-}
-
-.nav-menu.navOpen ul li.actived:after {
-  display: none;
-}
-
-.nav-menu.navOpen ul li a {
-  font-size: 20px;
-  line-height: 30px;
-  color: #dc3545;
-  font-size: 80%;
-  text-decoration: none;
-}
-
-.nav-menu.navOpen ul li a span {
-  display: inline-block;
-  padding-left: 5px;
-}
-
-.nav-menu.navOpen .nav-social {
-  display: inline-block;
-  padding: 30px 30px 0;
-}
-
-.nav-menu.navOpen ul li.nav-social a {
-  font-size: 30px;
-}
-

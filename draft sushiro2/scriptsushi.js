@@ -220,18 +220,18 @@ const clearPage = () => {
 
 
 
-// sidebar
-function initializeNavigation() {
-    const navIcon = document.getElementById('nav-icon1');
-    const navMenu = document.querySelector('.nav-menu');
-    const body = document.body;
+// function hideSidebar() {
+//   const sidebarMenu = document.getElementsByClassName("sidebar_menu")[0];
+//   sidebarMenu.style.display = "none";
+// }
 
-    navIcon.addEventListener('click', function() {
-        this.classList.toggle('open');
-        navMenu.classList.toggle('navOpen');
-        body.classList.toggle('scrolDisabled');
-    });
-}
 
-document.addEventListener('DOMContentLoaded', initializeNavigation);
 
+const opennedSidebar = (event) => {
+    event.stopPropagation();
+    document.getElementById("check").checked = true;
+};
+
+const toggleOutSidebar = () => {
+    document.getElementById("check").checked = false;
+};
