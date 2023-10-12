@@ -323,7 +323,7 @@ img.sushiplate {
 /* ********************************** responsive ********************************************** */
 
 /* ****************icon 3 sidebar*************** */
-#nav-icon1 {
+#iconSidebar {
   width: 30px;
   height: 25px;
   position: fixed;
@@ -342,7 +342,7 @@ img.sushiplate {
   z-index: 1001;
 }
 
-#nav-icon1 span {
+#iconSidebar span {
   display: block;
   position: fixed;
   height: 4px;
@@ -361,19 +361,19 @@ img.sushiplate {
   transition: .25s ease-in-out;
 }
 
-#nav-icon1 span:nth-child(1) {
+#iconSidebar span:nth-child(1) {
   top: 0px;
 }
 
-#nav-icon1 span:nth-child(2) {
+#iconSidebar span:nth-child(2) {
   top: 10px;
 }
 
-#nav-icon1 span:nth-child(3) {
+#iconSidebar span:nth-child(3) {
   top: 20px;
 }
 
-#nav-icon1.open span:nth-child(1) {
+#iconSidebar.open span:nth-child(1) {
   top: 10px;
   -webkit-transform: rotate(135deg);
   -moz-transform: rotate(135deg);
@@ -381,12 +381,12 @@ img.sushiplate {
   transform: rotate(135deg);
 }
 
-#nav-icon1.open span:nth-child(2) {
+#iconSidebar.open span:nth-child(2) {
   opacity: 0;
   left: -30px;
 }
 
-#nav-icon1.open span:nth-child(3) {
+#iconSidebar.open span:nth-child(3) {
   top: 10px;
   -webkit-transform: rotate(-135deg);
   -moz-transform: rotate(-135deg);
@@ -402,25 +402,37 @@ img.sushiplate {
   box-shadow: 0 0 6px rgba(248, 101, 101, 0.642);
 } */
 
-
 .sidebar_menu {
   position: fixed;
   /* background: rgba(251, 251, 251, 0.894); */
   box-shadow: 0 0 6px rgba(248, 101, 101, 0.642);
-  top: 0; /* Position at the top of the viewport */
+  /* top: 0; */
   left: 0; /* Position at the left of the viewport */
   width: 100%; /* Full width */
   height: 100%; /* Full height */
 }
 
-/* Rest of your CSS... */
+/* .sidebar_menu {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #8d502e;
+  z-index: 2;
+  top: -100vh;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.5s;
+} */
 
 
 .sidebar_menu::-webkit-scrollbar {
   width: 0.5em; /* Adjust the width as needed */
   }
 
-  .sidebar_menu .nav-menu  {
+  .sidebar_menu .lookAtMenu  {
     position: absolute;
     width: 100%;
     height: 60px;
@@ -428,12 +440,12 @@ img.sushiplate {
   }
 
   
-.nav-menu {
+.lookAtMenu {
   display: none;
   z-index: 2;
 }
 
-.nav-menu.navOpen {
+.lookAtMenu.openSidebar {
 
   padding-top: 7%;
 
@@ -449,22 +461,22 @@ img.sushiplate {
   position: relative;     /* Use a relative positioning context */
 }
 
-.nav-menu.navOpen ul {
+.lookAtMenu.openSidebar ul {
   float: none;
 }
 
-.nav-menu.navOpen ul li {
+.lookAtMenu.openSidebar ul li {
   display: block;
   padding: 20px 0;
   margin: 0;
 
 }
 
-.nav-menu.navOpen ul li.actived:after {
+.lookAtMenu.openSidebar ul li.actived:after {
   display: none;
 }
 
-.nav-menu.navOpen ul li a {
+.lookAtMenu.openSidebar ul li a {
   font-size: 20px;
   line-height: 30px;
   color: #dc3545;
@@ -472,17 +484,17 @@ img.sushiplate {
   text-decoration: none;
 }
 
-.nav-menu.navOpen ul li a span {
+.lookAtMenu.openSidebar ul li a span {
   display: inline-block;
   padding-left: 5px;
 }
 
-.nav-menu.navOpen .nav-social {
+.lookAtMenu.openSidebar .nav-social {
   display: inline-block;
   padding: 30px 30px 0;
 }
 
-.nav-menu.navOpen ul li.nav-social a {
+.lookAtMenu.openSidebar ul li.nav-social a {
   font-size: 30px;
 }
 

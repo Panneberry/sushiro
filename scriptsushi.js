@@ -221,17 +221,39 @@ const clearPage = () => {
 
 
 // sidebar
+// function initializeNavigation() {
+//     const navIcon = document.getElementById('iconSidebar');
+//     const navMenu = document.querySelector('.lookAtMenu');
+//     // const body = document.body;
+
+//     navIcon.addEventListener('click', function() {
+//         this.classList.toggle('open');
+//         navMenu.classList.toggle('openSidebar');
+//         body.classList.toggle('scrolDisabled');
+//     });
+// }
+
+// document.addEventListener('DOMContentLoaded', initializeNavigation);
+
+
 function initializeNavigation() {
-    const navIcon = document.getElementById('nav-icon1');
-    const navMenu = document.querySelector('.nav-menu');
-    const body = document.body;
+    const navIcon = document.getElementById('iconSidebar');
+    const navMenu = document.querySelector('.lookAtMenu');
+    const menu = document.getElementById('menu');
 
     navIcon.addEventListener('click', function() {
         this.classList.toggle('open');
-        navMenu.classList.toggle('navOpen');
+        navMenu.classList.toggle('openSidebar');
         body.classList.toggle('scrolDisabled');
+
+        if (this.classList.contains('open')) {
+            menu.style.top = "0";
+        } else {
+            menu.style.top = "-100vh";
+        }
     });
 }
 
 document.addEventListener('DOMContentLoaded', initializeNavigation);
+
 
