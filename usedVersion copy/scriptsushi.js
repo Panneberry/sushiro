@@ -49,8 +49,7 @@ const hideTotalAmountFromEveryoneElement = () => {
 
 // person element
 const createPersonElement = (personCounter, totalPriceWithServiceCharge) => {
-    const personElement = document.createElement("h6");
-    // change h2 to h6
+    const personElement = document.createElement("h2");
     personElement.id = `Person ${personCounter}`;
     // personElement.textContent = `Person ${personCounter}: ${totalPriceWithServiceCharge} THB`;
     personElement.textContent = `Person ${personCounter}: ${new Intl.NumberFormat().format(totalPriceWithServiceCharge)} THB`;
@@ -221,18 +220,40 @@ const clearPage = () => {
 
 
 
-// function hideSidebar() {
-//   const sidebarMenu = document.getElementsByClassName("sidebar_menu")[0];
-//   sidebarMenu.style.display = "none";
+// sidebar
+// function initializeNavigation() {
+//     const navIcon = document.getElementById('iconSidebar');
+//     const navMenu = document.querySelector('.lookAtMenu');
+//     // const body = document.body;
+
+//     navIcon.addEventListener('click', function() {
+//         this.classList.toggle('open');
+//         navMenu.classList.toggle('openSidebar');
+//         body.classList.toggle('scrolDisabled');
+//     });
 // }
 
+// document.addEventListener('DOMContentLoaded', initializeNavigation);
 
 
-const opennedSidebar = (event) => {
-    event.stopPropagation();
-    document.getElementById("check").checked = true;
-};
+function initializeNavigation() {
+    const navIcon = document.getElementById('iconSidebar');
+    const navMenu = document.querySelector('.lookAtMenu');
+    const menu = document.getElementById('menu');
 
-const toggleOutSidebar = () => {
-    document.getElementById("check").checked = false;
-};
+    navIcon.addEventListener('click', function() {
+        this.classList.toggle('open');
+        navMenu.classList.toggle('openSidebar');
+        body.classList.toggle('scrolDisabled');
+
+        if (this.classList.contains('open')) {
+            menu.style.top = "0";
+        } else {
+            menu.style.top = "-100vh";
+        }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', initializeNavigation);
+
+
