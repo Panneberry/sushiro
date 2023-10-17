@@ -216,7 +216,7 @@ strong:last-child {
 
 h1 {
     font-family: 'Narumon Sans', sans-serif;
-    font-weight: 450;
+    font-weight: bold;
     font-style: normal;
     font-size: clamp(3.25em, 7vw, 8em);
     line-height: 1.065;
@@ -227,6 +227,7 @@ h1 {
 h2 {
     font-family: 'Narumon Sans', sans-serif;
     font-weight: 450;
+    
     font-style: normal;
     font-size: calc(clamp(3.25em, 5vw, 4.5em) * .75);
     line-height: 1.065;
@@ -1061,6 +1062,33 @@ main .btn-hamburger.active {
     .color-box:nth-child(odd) {
         margin-right: 0;
     }
+
+    
+    .btn-normal .btn-click {
+        font-size: 450%;
+        
+    }
+
+    
+    h1:last-child,
+    /* h2:last-child, */
+    h3:last-child,
+    h4:last-child,
+    p:last-child,
+    p.big:last-child,
+    p.small:last-child,
+    a:last-child,
+    strong:last-child {
+        font-size: 500%;
+    }
+
+      /* for Total amount from everyone = 0 THB  */
+  h6{
+    font-size: 450%;
+    font-weight: bold;
+}
+  
+
 }
 
 /* ------------------------- Form -------------------------------------------------- */

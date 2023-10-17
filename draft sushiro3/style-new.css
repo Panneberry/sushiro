@@ -393,7 +393,7 @@ main.touch .main-wrap {
     .nav-active .fixed-nav .fixed-nav-inner {
         transform: translate(0, 0) rotate(0.001deg);
         transition-delay: .1s;
-        font-size: 500%;
+        /* font-size: 500%; */
     }
     .fixed-nav .nav-row .btn-link .btn-click::after {
         background: var(--color-white);
@@ -610,6 +610,19 @@ main.touch .main-wrap {
 }
 
 @media screen and (max-width: 720px) {
+
+        
+    .socials h5 {
+        padding-left: calc(var(--gap-padding) * .5);
+        margin-bottom: 1em;
+        font-size: 500%;
+    }
+
+
+    .footer h2 span {
+        font-size: 150%;
+    }
+
     .footer-rounded-div .rounded-div-wrap {
         height: 7.5vh;
     }
@@ -676,7 +689,7 @@ main.touch .main-wrap {
     .socials,
     .socials ul {
         width: 100%;
-        font-size: 500%;
+        /* font-size: 500%; */
     }
     .footer .arrow {
         position: absolute;

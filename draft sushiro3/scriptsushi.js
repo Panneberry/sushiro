@@ -49,7 +49,8 @@ const hideTotalAmountFromEveryoneElement = () => {
 
 // person element
 const createPersonElement = (personCounter, totalPriceWithServiceCharge) => {
-    const personElement = document.createElement("h2");
+    const personElement = document.createElement("h6");
+    // change h2 to h6
     personElement.id = `Person ${personCounter}`;
     // personElement.textContent = `Person ${personCounter}: ${totalPriceWithServiceCharge} THB`;
     personElement.textContent = `Person ${personCounter}: ${new Intl.NumberFormat().format(totalPriceWithServiceCharge)} THB`;
