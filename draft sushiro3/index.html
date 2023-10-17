@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html style="padding-left: 15px;
+            padding-right: 15px;">
+
+<head>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="icon" href="Sushiro favicon.png" type="image/png">
+
+  <title>Panne - Sushiro</title>
+  <link rel="stylesheet" href="style-sushi.css">
+
+  <script src="scriptsushi.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+
+    <img class="logo"
+      src="https://cdn.glitch.global/87b890ca-6106-49ca-aa8a-61c4d3b89a53/SUSHIRO_logo_alphabet.png?v=1693466009771"
+      alt="Logo" />
+
+    <h1>Calculator</h1>
+
+    <!-- start dish 40 - 160 thb -->
+    <div class="eachDishCenter">
+      <div class="dish40">
+        <button onclick="minusDish(0)">-40</button>
+        <span class="dish-label">Quantity: <span id="dish1Quantity">0</span></span>
+        <button onclick="addDish(0)">+40</button>
+      </div>
+
+      <div class="dish60">
+        <button onclick="minusDish(1)">-60</button>
+        <span class="dish-label">Quantity: <span id="dish2Quantity">0</span></span>
+        <button onclick="addDish(1)">+60</button>
+      </div>
+
+      <div class="dish80">
+        <button onclick="minusDish(2)">-80</button>
+        <span class="dish-label">Quantity: <span id="dish3Quantity">0</span></span>
+        <button onclick="addDish(2)">+80</button>
+      </div>
+
+      <div class="dish100">
+        <button onclick="minusDish(4)">-100</button>
+        <span class="dish-label">Quantity: <span id="dish5Quantity">0</span></span>
+        <button onclick="addDish(4)">+100</button>
+      </div>
+
+      <div class="dish120">
+        <button onclick="minusDish(3)">-120</button>
+        <span class="dish-label">Quantity: <span id="dish4Quantity">0</span></span>
+        <button onclick="addDish(3)">+120</button>
+      </div>
+
+      <div class="dish160">
+        <button onclick="minusDish(5)">-160</button>
+        <span class="dish-label">Quantity: <span id="dish6Quantity">0</span></span>
+        <button onclick="addDish(5)">+160</button>
+      </div>
+    </div>
+    <!-- end dish 40 - 160 thb -->
+    <h2 id="totalPrice">Sub Total Price: 0 THB</h2>
+    <h2 id="serviceCharge">Service Charge (10%): 0 THB</h2>
+    <h2 id="totalPriceWithServiceCharge">Total Price: 0 THB</h2>
+
+    <h2 id="totalPrices"></h2>
+
+    <div class="dish">
+      <button onclick="clearPage()">Clear</button>
+      <button onclick="undoLastAction()">Undo</button>
+      <button onclick="CalNextPerson()">CalNextPerson</button>
+    </div>
+
+    <div id="totalPerson" class="totalPersonClass">
+      <h2 id="totalAmountFromEveryone" style="display: none">
+        Total amount from everyone = 0 THB
+      </h2>
+    </div>
+  </body>
+
+</html>

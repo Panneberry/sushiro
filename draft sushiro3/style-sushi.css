@@ -1,0 +1,308 @@
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0px;
+  font-size: 30px;
+  font-weight: bold; /* Make the text bold */
+  background-color: #f8f9fa;
+  /* grey white background */
+  color: black;
+  /* Text color */
+  background-image: url("https://cdn.glitch.global/87b890ca-6106-49ca-aa8a-61c4d3b89a53/sushi%20bg-app.jpg?v=1693469701897");
+  background-repeat: repeat;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;  
+  font-size: 150%;
+  color: #dc3545;
+  margin-top: 10px; /* Adjust this value to position the title as desired */
+  /* Heading color */
+}
+
+
+
+/********************************dish design***********************************/
+.dish-label {
+  font-size: 80%;
+  /* text-align: center; */
+}
+
+.dish {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.dish button {
+  touch-action: manipulation;
+  margin: 0 5px;
+  font-size: 80%;
+  background-color: #dc3545;
+  color: white;
+  border-radius: 10px;
+}
+
+button {
+  width: 200px;
+  height: 50px;
+}
+
+.dish span {
+  flex-grow: 1;
+  margin: 0 5px;
+}
+
+/**************************each plate design*****************************/
+/* Common styles for all .dish classes */
+
+.eachDishCenter{
+  display: flex;
+  justify-content: flex-end; /* Horizontally align items to the end */
+  align-items: center; /* Vertically center items */
+  flex-direction: column; /* Layout items in a column */
+}
+
+.dish40,
+.dish60,
+.dish80,
+.dish100,
+.dish120,
+.dish160{
+  /* padding-left: 30%; */
+  margin-bottom: 10px;
+}
+
+.dish40 button,
+.dish60 button,
+.dish80 button,
+.dish100 button,
+.dish120 button,
+.dish160 button {
+  touch-action: manipulation; /* for fast clicking*/
+  margin: 0 5px;
+  font-size: 80%;
+  color: white;
+  border-radius: 10px;
+}
+
+.dish40 span,
+.dish60 span,
+.dish80 span,
+.dish100 span,
+.dish120 span,
+.dish160 span  {
+  flex-grow: 1;
+  margin: 0 5px;
+}
+
+/* Specific styles for each .dish class */
+.dish40 button {
+  background-color: #dc3545;
+}
+
+.dish60 button {
+  background-color: #acdcfb;
+}
+
+.dish80 button {
+  background-color: #fcb900;
+}
+
+.dish100 button {
+  background-color: #dc3545;
+}
+
+.dish120 button {
+  background-color: #2d2d2d;
+}
+
+.dish160 button {
+  background-color: #dc3545;
+}
+
+
+/****************************text bellow button design***********************************/
+
+#totalPrice,
+#serviceCharge,
+#totalPriceWithServiceCharge {
+  margin-top: 20px;
+  /* padding-left: 31.5%; */
+  font-size: 80%;
+    
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: right;
+  padding-inline: 28%;
+
+}
+
+#totalPriceWithServiceCharge {
+  margin-bottom: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.totalPersonClass{
+  font-size: 50%;
+  /* padding-left: 31.5%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  padding-inline: 28%;
+
+
+}
+
+/* ************************************ img web ******************************************** */
+
+img.logo {
+  max-width: 20%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+} 
+
+img.sushiplate {
+  max-width: 50%;
+  height: auto;
+}
+
+/* ******************************** responsive ************************************************ */
+
+
+@media only screen and (max-width: 768px) {
+  /* iPhone 11 Pro Max */
+  .dish {
+    flex-wrap: wrap;
+    /* margin-left: 10px;
+    margin-right: 10px; */
+  }
+
+  /* .dish {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  } */
+
+  .dish button{
+    flex-basis: 30%;
+    font-size: 70%;
+  }
+  .dish span {
+    flex-basis: 30%;
+  }
+
+  .dish40,
+  .dish60,
+  .dish80,
+  .dish100,
+  .dish120,
+  .dish160{
+    padding-left: 0px;
+    display: flex;
+    /* margin-bottom: 10px; */
+  }
+
+
+  .dish40 button,
+  .dish60 button,
+  .dish80 button,
+  .dish100 button,
+  .dish120 button,
+  .dish160 button
+   {
+    font-size: 80%;
+    /* margin-right: 10px;
+    margin-left: 10px; */
+  }
+
+  button {
+    width: 100px;
+    height: 35px;
+  }
+  img.logo {
+    max-width: 60%;
+  } 
+
+  img.sushiplate {
+    max-width: 100%;
+  }
+
+  h1 {
+    margin-bottom: 30px;
+    font-size: 120%;
+    margin-top: 10px; 
+  }
+
+  .dish-label {
+    font-size: 90%;
+    text-align: center;
+  }
+
+  #totalPrice,
+  #serviceCharge,
+  #totalPriceWithServiceCharge {
+    margin-top: 20px;
+    padding-left: 0px;
+    font-size: 65%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: right;
+    padding-inline: 5%;
+
+  }
+
+  .totalPersonClass{
+    font-size: 70%;
+    padding-left: 0px;
+  }
+
+  *
+  {
+    font-size: 80%;
+  }
+  #totalPriceWithServiceCharge {
+  margin-bottom: 10px;
+  }
+
+  .sidebar_menu {
+    width: 70%;
+    left: -70%;
+    width: 400px;
+    left: -450px;
+  }
+
+  .sidebar_menu .menu a {
+    font-size: 250%;
+  }
+
+  .sidebar_menu .myLogoTab a {
+    font-size: 170%;
+  }
+
+  .sidebar_menu .btn_closeSide2 i {
+    font-size: 250%;
+  }
+
+}
+
+
+/* ********************************** responsive ********************************************** */
