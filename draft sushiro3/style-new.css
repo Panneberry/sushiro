@@ -393,6 +393,7 @@ main.touch .main-wrap {
     .nav-active .fixed-nav .fixed-nav-inner {
         transform: translate(0, 0) rotate(0.001deg);
         transition-delay: .1s;
+        font-size: 500%;
     }
     .fixed-nav .nav-row .btn-link .btn-click::after {
         background: var(--color-white);
@@ -622,6 +623,7 @@ main.touch .main-wrap {
     }
     .footer .container.medium .row:nth-child(3) .flex-col .btn .btn-click {
         width: 100%;
+        font-size: 500%;
     }
     .footer .container.medium .row:nth-child(1) {
         padding-bottom: calc(var(--section-padding) * .75);
@@ -651,6 +653,7 @@ main.touch .main-wrap {
     .bottom-footer .flex-col:nth-child(1) {
         order: 3;
         padding: 0 var(--container-padding) calc(var(--gap-padding) * .75) var(--container-padding);
+        font-size: 500%;
     }
     .socials li {
         display: inline-flex;
@@ -673,6 +676,7 @@ main.touch .main-wrap {
     .socials,
     .socials ul {
         width: 100%;
+        font-size: 500%;
     }
     .footer .arrow {
         position: absolute;

@@ -88,6 +88,11 @@
     :root {
         --section-padding: 12vh;
     }
+
+    .theme-dark .btn-round .btn-click {
+        background: var(--color-blue);
+        font-size: 500%;
+    }
 }
 
 @media screen and (max-width: 540px) {
@@ -342,6 +347,15 @@ p a {
 .container.medium {
     padding-left: calc(var(--container-padding) * 2);
     padding-right: calc(var(--container-padding) * 2);
+   
+}
+
+.container.mediumNew {
+    padding-left: calc(var(--container-padding) * 2);
+    padding-right: calc(var(--container-padding) * 2);
+    background-image: url("https://cdn.glitch.global/87b890ca-6106-49ca-aa8a-61c4d3b89a53/sushi%20bg-app.jpg?v=1693469701897");
+    background-repeat: repeat;
+    
 }
 
 .container.small {
@@ -480,6 +494,7 @@ video.overlay {
 .btn-normal .btn-click {
     -webkit-box-shadow: inset 0px 0px 0px 1px var(--color-border);
     box-shadow: inset 0px 0px 0px 1px var(--color-border);
+    
 }
 
 .btn-fill {
