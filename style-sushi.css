@@ -372,7 +372,7 @@ img.sushiplate {
 
   .dish {
     flex-wrap: wrap;
-    font-size: 650%;
+    font-size: 450%;
     /* margin-left: 10px;
     margin-right: 10px; */
   }
@@ -461,6 +461,7 @@ img.sushiplate {
   .totalPersonClass{
     font-size: 70%;
     padding-left: 0px;
+    padding-right: 0px;
   }
 
   *
