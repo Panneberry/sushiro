@@ -53,10 +53,10 @@
 /* ------------------------- Colors -------------------------------------------------- */
 
 :root {
-    --color-dark: #a392cf;
-    --color-dark-dark: #a392cf;
+    --color-dark: #2d2d2d;
+    --color-dark-dark: #dc3545;
     --color-light: #FFFFFF;
-    --color-blue: #aac4ff;
+    --color-blue: #dc3545;
     --color-blue-dark: #F2B5D4;
     --color-gray: #F2B5D4;
     --color-lightgray: #E9EAEB;
@@ -206,6 +206,7 @@ p.small:last-child,
 a:last-child,
 strong:last-child {
     margin-bottom: 0;
+    /* padding-bottom: 60px; */
 }
 
 h1 {
